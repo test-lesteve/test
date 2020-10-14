@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: 2
+      MKL_NUM_THREADS: 2
+      OPENBLAS_NUM_THREADS: 2
+
+    steps:
+    - name: Install dependencies
+      run: |
+        env
+        echo OPENBLAS_NUM_THREADS: $OPENBLAS_NUM_THREADS
+
