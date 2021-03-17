@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussions
-    url: https://github.com/scikit-learn/scikit-learn/discussions
+    url: https://github.com/scikit-learn/scikit-learn/discussions/new
     about: Ask questions and discuss with other scikit-learn community members
   - name: Stack overflow
     url: https://stackoverflow.com/questions/tagged/scikit-learn
@@ -12,6 +12,6 @@ contact_links:
   - name: Gitter
     url: https://gitter.im/scikit-learn/scikit-learn
     about: Users and developers can sometimes be found on the gitter channel
-  - name: Blank
+  - name: Blank issue
     url: https://github.com/scikit-learn/scikit-learn/issue/new
-    about: Github Discussions should be used in most cases, see above
+    about: [Github Discussions](https://github.com/scikit-learn/scikit-learn/discussions/new) should be used in most cases, unless you know better
