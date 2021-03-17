@@ -1,38 +1,71 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help us reproduce and correct the bug
 title: ''
-labels: ''
+labels: 'Bug: triage'
 assignees: ''
 
 ---
 
-**Describe the bug**
+<!--
+Before submitting a bug, please make sure the issue hasn't been already
+addressed by searching through the past issues.
+-->
+
+#### Describe the bug
+<!--
 A clear and concise description of what the bug is.
+-->
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+#### Steps/Code to Reproduce
+<!--
+Please add a minimal example that we can reproduce the error by running the
+code. Be as succinct as possible, do not depend on external data. In short, we
+are going to copy-paste your code and we expect to get the same
+result as you.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+Example:
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
+docs = ["Help I have a bug" for i in range(1000)]
+vectorizer = CountVectorizer(input=docs, analyzer='word')
+lda_features = vectorizer.fit_transform(docs)
+lda_model = LatentDirichletAllocation(
+    n_topics=10,
+    learning_method='online',
+    evaluate_every=10,
+    n_jobs=4,
+)
+model = lda_model.fit(lda_features)
+```
+If the code is too long, feel free to put it in a public gist and link
+it in the issue: https://gist.github.com
+-->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+```
+Sample code to reproduce the problem
+```
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+#### Expected Results
+<!-- Example: No error is thrown. Please paste or describe the expected results.-->
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+#### Actual Results
+<!-- Please paste or specifically describe the actual output or traceback. -->
 
-**Additional context**
-Add any other context about the problem here.
+#### Versions
+<!--
+Please run the following snippet and paste the output below.
+For scikit-learn >= 0.20:
+import sklearn; sklearn.show_versions()
+For scikit-learn < 0.20:
+import platform; print(platform.platform())
+import sys; print("Python", sys.version)
+import numpy; print("NumPy", numpy.__version__)
+import scipy; print("SciPy", scipy.__version__)
+import sklearn; print("Scikit-Learn", sklearn.__version__)
+import imblearn; print("Imbalanced-Learn", imblearn.__version__)
+-->
+
+
+<!-- Thanks for contributing! -->
