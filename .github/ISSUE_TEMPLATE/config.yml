@@ -12,6 +12,6 @@ contact_links:
   - name: Gitter
     url: https://gitter.im/scikit-learn/scikit-learn
     about: Users and developers can sometimes be found on the gitter channel
-  - name: Please don't ...
-    url: https://github.com/scikit-learn/scikit-learn/new
+  - name: Last resort only ...
+    url: https://github.com/scikit-learn/scikit-learn/issues/new
     about: Mostly for core devs
