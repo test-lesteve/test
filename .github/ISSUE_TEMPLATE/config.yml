@@ -14,4 +14,4 @@ contact_links:
     about: Users and developers can sometimes be found on the gitter channel
   - name: Last resort only ...
     url: https://github.com/scikit-learn/scikit-learn/issues/new
-    about: Mostly for core devs
+    about: Hidden empty issue creator, mostly for core devs
