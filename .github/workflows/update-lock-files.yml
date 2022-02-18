@@ -29,4 +29,3 @@ jobs:
             Automatically update lock files
           commit-message: 'Update lock files'
           committer: 'CI bot'
-          author: 'CI bot'
