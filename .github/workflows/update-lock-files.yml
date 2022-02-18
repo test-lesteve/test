@@ -1,4 +1,4 @@
-name: Update lock files 
+name: Update lock files
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
       - name: Update lock files
         run: |
                 pip install pip-tools
-                pip-compile requirements.txt -o locked-requirements.txt
+                pip-compile --upgrade requirements.txt -o locked-requirements.txt
       - name: Open pull request
         uses: peter-evans/create-pull-request@v3
         with:
@@ -28,4 +28,3 @@ jobs:
           commit-message: 'Update lock files'
           committer: 'CI bot'
           author: 'CI bot'
-          
