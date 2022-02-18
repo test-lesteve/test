@@ -9,14 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: debug
+        run: |
+          git remote -v
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
       - name: Update lock files
         run: |
-                pip install pip-tools
-                pip-compile --upgrade requirements.txt -o locked-requirements.txt
+          pip install pip-tools
+          pip-compile --upgrade requirements.txt -o locked-requirements.txt
       - name: Open pull request
         uses: peter-evans/create-pull-request@v3
         with:
