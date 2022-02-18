@@ -23,7 +23,6 @@ jobs:
       - name: Open pull request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{secrets.GH_TOKEN}}
           delete-branch: true
           title: Update lock files
           body: |
