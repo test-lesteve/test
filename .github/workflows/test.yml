@@ -16,10 +16,13 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
+        pwd
         env
         echo OPENBLAS_NUM_THREADS: $OPENBLAS_NUM_THREADS
     - name: tmate
       run: |
+        pwd
+        cd ..
         pwd
         ls -ltrah
         which bash
