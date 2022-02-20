@@ -2,9 +2,11 @@
 set -e
 
 echo "Downloading tmate"
+cd /tmp
 wget https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-amd64.tar.xz
 tar xvf tmate-2.4.0-static-linux-amd64.tar.xz
 tmate_path="/tmp/tmate-2.4.0-static-linux-amd64/tmate"
+cd -
 
 echo "Creating new session"
 

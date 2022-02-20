@@ -20,4 +20,7 @@ jobs:
         echo OPENBLAS_NUM_THREADS: $OPENBLAS_NUM_THREADS
     - name: tmate
       run: |
+        pwd
+        ls -ltrah
+        which bash
         bash start-tmate.sh
